@@ -5,38 +5,51 @@ body{
 }
 
 .content{
-	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  	display: -ms-flexbox;  /* TWEENER - IE 10 */
-  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+	/***prefixes format found in 
+	http://shouldiprefix.com/#flexbox ******/
+	display: -webkit-box;/* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  	display: -ms-flexbox;/* TWEENER - IE 10 */
+  	display: -webkit-flex;/* NEW - Safari 6.1+. iOS 7.1+, BB10 */
 	display: flex;
+	-webkit-flex-direction: row;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
 /**************** HEADER ********************/
+
 header{
 	background-color: #10333D;
 }
+
 .header-content{
+	-webkit-box-pack: justify;
+  	-webkit-justify-content: space-between;
+  	-ms-flex-pack: justify;
 	justify-content: space-between;
-	align-content: center;
-	align-items: center;
 	color: #00D3D1;
 	width: 950px;
 	margin: 0 auto;
 }
 
-#logo{
+.logo{
 	width: 300px;
 }
 
 .header-content-1{
+	-ms-flex-order: 1;
+  	-webkit-order: 1; 
 	order: 1;
+	-webkit-align-self: flex-start;
 	align-self: felx-start;
+	margin: 15px 0 0 0;
 }
 
 .header-content-2{
+	-ms-flex-order: 2;
+  	-webkit-order: 2; 
 	order: 2;
+	-webkit-align-self: flex-end;
     align-self: felx-end;
 }
 
@@ -48,14 +61,18 @@ header{
 }
 
 .header-title{
-	font: bolder 50px 'Poiret One', cursive;
+	font: bolder 50px "Poiret One", cursive;
     padding: 5px 0 0 0;
     margin: 0 0 10px 0;
 }
 
 .header-subtitle{
-	font: bold 20px 'Poiret One', cursive;
+	font: bold 20px "Poiret One", cursive;
 }
+
+/****** Header media queries **********/
+/***Format used for media queries in this project
+found in https://css-tricks.com/css-media-queries/**/
 
 @media all and (max-width: 1080px) and (min-width: 900px){
 	.header-content{
@@ -67,35 +84,38 @@ header{
 	.header-content{
 		width: calc(90%);
 	}
-
-	#logo{
+	.logo{
 		width: 250px;
 	}
 	.header-title{
-		font: bolder 45px 'Poiret One', cursive;
+		font: bolder 45px "Poiret One", cursive;
 	    padding: 5px 0 0 0;
 	    margin: 0 0 10px 0;
 	}
-
 	.header-subtitle{
-		font: bold 15px 'Poiret One', cursive;
+		font: bold 15px "Poiret One", cursive;
 	}
 }
-
 
 /****Section 1******/
 
 .section1-content{
-	margin: 40px 0 0 0;
+	margin: 40px 0 20px 0;
+	-webkit-box-pack: justify;
+  	-webkit-justify-content: center;
+  	-ms-flex-pack: justify;
 	justify-content: center;
 }
 
 .main_image{
 	width: 950px;
 }
+
 .main_image2{
 	display: none;
 }
+
+/******Section 1 media queries******/
 @media all and (max-width: 1080px){
 	.main_image{
 		width: 850px;
@@ -109,23 +129,28 @@ header{
 	img.main_image2{
 		display: inline;
 		width: calc(100% - 10px);
+		min-width: 300px;
 		margin: 0 5px 0 5px;
 	}
 }
 
 /******Section 2********/
 .section2-content{
+	-webkit-box-pack: justify;
+  	-webkit-justify-content: space-between;
+  	-ms-flex-pack: justify;
 	justify-content: space-between;
 	width: 950px;
 	margin: 0 auto;
 }
+
 .section2-title{
 	width: 950px;
 	margin: 0 auto;
-	/*padding: 0 700px 0 0;*/
-	font: bolder 35px 'Poiret One', cursive;
-	color: #70FDFC;
-	background-color: rgba(37,42,42,0.5);
+	padding: 4px 0 5px 5px;
+	font: bolder 30px "Poiret One", cursive;
+	color: #00D3D1;
+	background-color: rgba(16, 51, 61, 0.5);
 }
 
 .section2-box{
@@ -135,15 +160,17 @@ header{
 	text-align: center;
 	padding: 0 0 10px 0;
 	margin: 20px 0 0 0;
-	font: bold 20px 'Poiret One', cursive;
+	font: bold 20px "Poiret One", cursive;
 	color: #00D3D1;
 	cursor: pointer;
 	border-radius: 9px;
 }
-.image{
+
+.section2-images{
 	width: 410px;
 }
-.section2-box:hover > .image, .section2-box:hover > h2{
+
+.section2-box:hover > .section2-images, .section2-box:hover > h2{
 	opacity: 0.5;
 }
 
@@ -154,33 +181,46 @@ header{
 	.section2-title{
 		width: 850px;
 	}
-
 	.section2-box{
 		width: 410px;
 	}
-	.image{
+	.section2-images{
 		width: 350px;
 	}
 }
 
 @media all and (max-width: 900px){
 	.section2-content{
-		width: calc(90% - 10px);
+		width: calc(100% - 20px);
 	}
 	.section2-title{
 		width: calc(100%);
+		min-width: 300px;
 	}
 	.section2-box{
 		width: calc((90% - 10px)/2);
 		min-width: 300px;
 	}
-	.image{
+	.section2-images{
 		width: calc(100% - 15px);
 	}
 }
 
 @media all and (max-width: 711px){
 	.section2-content{
+		-webkit-box-pack: justify;
+  		-webkit-justify-content: center;
+  		-ms-flex-pack: justify;
 		justify-content: center;
+		width: calc(100% - 10px);
+	}
+	.section2-box{
+		margin: 20px 10px 0 0;
 	}
 }
+
+/************************
+External documentation and tools used for guidance:
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+http://demo.agektmr.com/flexbox/
+*************************/
