@@ -3,58 +3,85 @@
 
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 		<title>Portfolio Natalia Forno</title>
 		<link rel="stylesheet" href="css/stylesheet.css">
-		<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet'>
+		<script src="js/script.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 	</head>
 
 	<body>
-		<header>
-			<div class="content header-content">
-				<div class="header-content-1">
-					<img class="logo" src="images/Natfor_logo.svg" alt="Natalia Forno Logo">
-				</div>
-				<div class="header-content-2">
-					<h1 class="header-title">Natalia Forno</h1>
-					<h3 class="header-subtitle">WEB DEVELOPER</h3>
-				</div>
-			</div>
-			<div class="header-line"></div>
-		</header>
 
-		<section>
-			<div class="content section1-content">
-				<div class="section1-content-1">
-					<!--Two versions of the same image with different sizes being used-->
-					<img class="main_image" src="images/main_image.png" alt="Main Image">
-					<img class="main_image2" src="images/main_image_med.png" alt="Main Image">
-				</div>
-			</div>
-		</section>
+		<!-- div with wrapper class used to wrap all sections in the page, the row class is added to be able to use flexbox child properties on the sections wrapped-->
+		<div class="wrapper row">
 
-		<section>
-			<div class="content section2-content">
-				<h2 class="section2-title">Featured Work</h2>
-				<!--section-box class is used to style the boxes for each section content equaly-->
-				<!--All images in the section are styled to have the same size and properties using section2-images class-->
-				<div class="content section2-box">
-					<h2>Online Resume</h2>
-					<img class="section2-images" src="images/online_resume.svg" alt="Online Resume">
+			<section class="main-section col-12 row">
+				<!--placing header inside a section in order to have the nav on the right side and manage placement with flexbox-->
+				<header class="col-8 col-md-12 col-min-12 row">
+					<div class="header-content-1 col-5">
+						<img class="logo" src="images/Natfor_logo.svg" alt="Natalia Forno Logo">
+					</div>
+					<div class="header-content-2 col-6 column">
+						<h1 class="header-title">Natalia Forno</h1>
+						<h3 class="header-subtitle">WEB DEVELOPER</h3>
+					</div>
+					</header>
+					<nav class="col-4 col-min-7 column">
+						<div class="featuredW-btn">Featured Work</div>
+						<div class="contact-btn">Contact</div>
+					</nav>
+					<div class="main-line col-12"></div>
+					<div class="section1-content-1 col-10 col-md-12 col-min-12">
+						<img class="main_image" src="images/main_image.png" srcset="images/main_image_med.png 900w, images/main_image_min.png 600w" sizes="100vw" alt="Main Image">
+					</div>
+			</section>
+
+			<section class="section2 row col-12">
+				<div class="section2-wrapper row col-9 col-md-11 col-min-11">
+					<div class="section-title">
+						<h2 class="section2-title-content">Featured Work</h2>
+					</div>
+						<!--section2-box class is used to style the boxes for each section content-->
+						<!--All images in the section are styled to have the same size and properties using section2-images class-->
+					<div class="resumeBox section2-box column col-5 col-min-9">
+						<h2>Online Resume</h2>
+						<img class="section2-images col-3" src="images/online_resume.svg" alt="Online Resume">
+					</div>
+					<div class="gameBox section2-box column col-5 col-min-9">
+						<h2>Classic Arcade Game</h2>
+						<img class="section2-images col-3" src="images/arcade_game.svg" alt="Arcade Game">
+					</div>
+					<div class="mapBox section2-box column col-5 col-min-9">
+						<h2>Neighborhood Map</h2>
+						<img class="section2-images col-3" src="images/bsas_map.png" alt="Neighborhood Map">
+					</div>
+					<div class="trackerBox section2-box column col-5 col-min-9">
+						<h2>Health Tracker</h2>
+						<img class="section2-images col-3" src="images/health_tracker.jpg" alt="Health Tracker">
+					</div>
 				</div>
-				<div class="content section2-box">
-					<h2>Classic Arcade Game</h2>
-					<img class="section2-images" src="images/arcade_game.svg" alt="Arcade Game">
+			</section>
+
+			<section class="section3 row col-9 col-md-11 col-min-11">
+				<div class="section-title col-12">
+						<h2 class="section3-title-content">Contact</h2>
 				</div>
-				<div class="content section2-box">
-					<h2>Neighborhood Map</h2>
-					<img class="section2-images" src="images/bsas_map.png" alt="Neighborhood Map">
+				<div class="email col-6">
+					<h3>nataforno@gmail.com</h3>
 				</div>
-				<div class="content section2-box">
-					<h2>Health Tracker</h2>
-					<img class="section2-images" src="images/health_tracker.jpg" alt="Health Tracker">
+				<div class="social-media col-6 row">
+					<img class="linkedin-icon icons col-4" src="images/MyIcons/linkedin26.svg" alt="linkedin icon">
+					<img class="github-icon icons col-4" src="images/MyIcons/github13.svg" alt="github icon">
+					<img class="codepen-icon icons col-4" src="images/MyIcons/3d80.svg" alt="codePen icon">
 				</div>
-			</div>
-		</section>
+			</section>
+
+			<footer class="col-12 row">
+				<h4 class="col-5">2015 Natalia Forno Udacity Front-End Developer nanodegree Project 1</h4>
+				<h4 class="col-5">LinkedIn Github and CodePen icons <span class="freekip">designed by Freekip</span></h4>
+			</footer>
+
+		</div>
 
 	</body>
 
