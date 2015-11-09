@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8">
 		<title>Portfolio Natalia Forno</title>
 		<link rel="stylesheet" href="css/stylesheet.css">
 		<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet'>
 	</head>
+
 	<body>
-		
-			<header>
-				<div class="content header-content">
-					<div class="header-content-1">
-						<img id="logo" src="images/Natfor_logo.svg" alt="Natalia Forno Logo">
-					</div>
+		<header>
+			<div class="content header-content">
+				<div class="header-content-1">
+					<img class="logo" src="images/Natfor_logo.svg" alt="Natalia Forno Logo">
+				</div>
+				<div class="header-content-2">
+					<h1 class="header-title">Natalia Forno</h1>
+					<h3 class="header-subtitle">WEB DEVELOPER</h3>
+				</div>
+			</div>
+			<div class="header-line"></div>
+		</header>
 
-					<div class="header-content-2">
-						<h1 class="title header-title">Natalia Forno</h1>
-						<h3 class="subtitle header-subtitle">WEB DEVELOPER</h3>
-					</div>
+		<section>
+			<div class="content section1-content">
+				<div class="section1-content-1">
+					<!--Two versions of the same image with different sizes being used-->
+					<img class="main_image" src="images/main_image.png" alt="Main Image">
+					<img class="main_image2" src="images/main_image_med.png" alt="Main Image">
 				</div>
-				<div class="header-line"></div>
-			</header>
-			<section>
-				<div class="content section1-content">
-					<div class="section1-content-1">
-						<img class="main_image" src="images/main_image.png" alt="Main Image">
-						<img class="main_image2" src="images/main_image_med.png" alt="Main Image">
-					</div>					
-				</div>
-			</section>
-			<section>
-				<div class="content section2-content">
-					<h2 class="content section2-title">Featured Work</h2>
+			</div>
+		</section>
 
-					<div class="section2-box section2-content1">
-						<h2>Online Resume</h2>
-						<img class="image section2-content1-img" src="images/online_resume.svg" alt="online resume">
-					</div>
-					<div class="section2-box section2-content2">
-						<h2>Classic Arcade Game Clone</h2>
-						<img class="image section2-content2-img" src="images/Space_Invaders.png" alt="online resume">
-					</div>
-					<div class="section2-box section2-content3">
-						<h2>Neighborhood Map project</h2>
-						<img class="image section2-content3-img" src="images/bsas_map.png" alt="online resume">
-					</div>
-					<div class="section2-box section2-content4">
-						<h2>Health Tracker</h2>
-						<img class="image section2-content4-img" src="images/health_tracker.jpg" alt="online resume">
-					</div>
+		<section>
+			<div class="content section2-content">
+				<h2 class="section2-title">Featured Work</h2>
+				<!--section-box class is used to style the boxes for each section content equaly-->
+				<!--All images in the section are styled to have the same size and properties using section2-images class-->
+				<div class="content section2-box">
+					<h2>Online Resume</h2>
+					<img class="section2-images" src="images/online_resume.svg" alt="Online Resume">
 				</div>
-			</section>
-			<footer>
-			</footer>
-		
+				<div class="content section2-box">
+					<h2>Classic Arcade Game</h2>
+					<img class="section2-images" src="images/arcade_game.svg" alt="Arcade Game">
+				</div>
+				<div class="content section2-box">
+					<h2>Neighborhood Map</h2>
+					<img class="section2-images" src="images/bsas_map.png" alt="Neighborhood Map">
+				</div>
+				<div class="content section2-box">
+					<h2>Health Tracker</h2>
+					<img class="section2-images" src="images/health_tracker.jpg" alt="Health Tracker">
+				</div>
+			</div>
+		</section>
+
 	</body>
 
 </html>
